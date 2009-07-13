@@ -1,0 +1,62 @@
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    autoconnect = "Yes";
+  }
+);
+
+chatnets = {
+  freenode = {
+    type = "IRC";
+    nick = "alexsuraci";
+    autosendcmd = "/^msg nickserv identify PASSWORD;";
+  };
+};
+
+channels = (
+  { name = "#chyrp"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#atomo"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#aliter"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#haskell"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#disrupted"; chatnet = "freenode"; autojoin = "Yes"; }
+);
+
+statusbar = {
+  default = {
+    topic = { disabled = "yes"; };
+
+    prompt = {
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        input = { priority = "10"; };
+        act = { alignment = "right"; };
+      };
+    };
+
+    window = { disabled = "yes"; };
+  };
+};
+
+settings = {
+  core = { real_name = "Alex Suraci"; user_name = "alex"; nick = "alex"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    theme = "minimalist";
+    bell_beeps = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+  };
+};
+
+hilights = (
+  { text = "alexsuraci"; nick = "yes"; word = "yes"; },
+  { text = "alex"; nick = "yes"; word = "yes"; channels = ( "#chyrp", "#disrupted", "#atomo", "#aliter" ); }
+);
+
+keyboard = ( 
+  { key = "meta-[M"; id = "command"; data = "mouse_xterm "; }
+);
+
+aliases = { mpd = "exec -o mpc | head -n 1"; };

@@ -1,0 +1,121 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+
+Xcursor.theme: Jimmac
+
+URxvt.font: -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+URxvt.boldFont: -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+URxvt.italicFont: -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+URxvt.bolditalicFont: -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+urxvt*scrollBar: false
+urxvt*depth: 32
+urxvt*background: #151515
+urxvt*foreground: #E6E6E6
+urxvt*cursorColor: #ffffff
+
+URxvt*perl-ext-common: default,matcher
+URxvt*matcher.button: 3
+URxvt.urlLauncher: firefox
+URxvt.urgentOnBell: true
+
+xterm*background: #151515
+xterm*foreground: #E6E6E6
+xterm*font: -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+
+! ------------- Text Ex Machina
+! Black
+*color0:  #151515
+*color8:  #333333
+! Red
+*color1:  #AB0000
+*color9:  #E50808
+! Green
+*color2:  #B1F36F
+*color10: #3FE200
+! Yellow
+! This is actually a darker black.
+!*color3:  #121212
+!*color11: #303030
+*color3: #E5E554
+*color11: #FFFF8B
+! Blue
+*color4:  #303364
+*color12: #636697
+! Purple
+*color5:  #AE81FF
+*color13: #CFA3FF
+! Cyan
+*color6:  #66CCFF
+*color14: #99FFFF
+! White
+*color7:  #E6E6E6
+*color15: #FFFFFF
+
+! --------------- Tango-Esque
+!*background:  #222222
+!*foreground:  #aaaaaa
+! Black
+!*color0:      #000000
+!*color8:      #555753
+! Red
+!*color1:      #ff6565
+!*color9:      #ff8d8d
+! Green
+!*color2:      #93d44f
+!*color10:     #c8e7a8
+! Yellow
+!*color3:      #eab93d
+!*color11:     #ffc123
+! Blue
+!*color4:      #204a87
+!*color12:     #3465a4
+! Mangenta
+!*color5:      #ce5c00
+!*color13:     #f57900
+! Cyan 
+!*color6:      #89b6e2
+!*color14:     #46a4ff
+! White
+!*color7:      #cccccc
+!*color15:     #ffffff
+
+!*color0: #2F2E2D
+!*color8: #4A4845
+!*color1: #C37561
+!*color9: #D19485
+!*color2: #A0A57E
+!*color10: #B6B99D
+!*color3: #D1A375
+!*color11: #DEBC9C
+!*color4: #7985A3
+!*color12: #98A1B9
+!*color5: #AB716D
+!*color13: #BE918E
+!*color6: #98B9B1
+!*color14: #CBE6CB
+!*color7: #D0D0D0
+!*color15: #EFEFEF
+
+!*background: #1a1a1a
+!*foreground: #acacab
+
+
+!*background: #000000
+!*foreground: #FFFFFF
+!*color0: #4E4E4E
+!*color8: #7C7C7C
+!*color1: #FF6C60
+!*color9: #FFB600
+!*color2: #A8FF60
+!*color10: #CEFFAB
+!*color3: #FFFFB6
+!*color11: #FFFFCB
+!*color4: #96CBFE
+!*color12: #FFFFCB
+!*color5: #FF73FD
+!*color13: #FF9CFE
+!*color6: #C6C5FE
+!*color14: #DFDFFE
+!*color7: #EEEEEE
+!*color15: #FFFFFF

@@ -1,0 +1,11 @@
+"ncmpcpp prev"
+   F6
+
+"ncmpcpp toggle"
+   F7
+
+"ncmpcpp next"
+   F8
+
+"scrot 'Screenshot-%Y-%m-%d_%H-%M-%S.png' -q 100 -m -e 'mv $f ~/Pictures/Screenshots'"
+   Sys_Req
