@@ -9,7 +9,8 @@
   (blink-cursor-mode -1)
   (server-start))
 
-(setq visible-bell t
+(setq ring-bell-function 'ignore
+      visible-bell nil
       font-lock-maximum-decoration t
       inhibit-startup-message t
       transient-mark-mode t
@@ -30,7 +31,6 @@
 (setq browse-url-browser-function 'browse-default-macosx-browser)
 (auto-compression-mode t)
 (global-font-lock-mode t)
-(menu-bar-mode -1)
 (recentf-mode 1)
 (show-paren-mode 1)
 

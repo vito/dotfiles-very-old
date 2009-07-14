@@ -1,5 +1,8 @@
 ;;; bindings.el
 
+;; Set Command as a meta key
+(setq ns-command-modifier 'meta)
+
 ;; Terminal
 (global-set-key [f1] 'eshell)
 
@@ -73,6 +76,8 @@
 (global-set-key (kbd "M-n") 'toggle-fullscreen)
 
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+
+(define-key php-mode-map (kbd "RET") 'newline-and-indent)
 
 ;; Activate occur easily inside isearch
 (define-key isearch-mode-map (kbd "C-o")

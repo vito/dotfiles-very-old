@@ -5,7 +5,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "vendor/color-theme"))
 (add-to-list 'load-path (concat dotfiles-dir "vendor/yasnippet.el"))
-(add-to-list 'load-path (concat dotfiles-dir "slime"))
 
 ;; Misc. packages
 (require 'cl)
@@ -19,6 +18,7 @@
 (require 'yasnippet)
 (require 'unbound)
 (require 'whitespace)
+(require 'php-mode)
 (require 'textile-mode)
 (require 'color-theme)
 
@@ -29,9 +29,10 @@
 (require 'eshell-conf)
 (require 'lisp)
 
-;; Slime
-(setq inferior-lisp-program "/opt/local/bin/sbcl")
-(slime-setup)
+;; Editing
+(setq tab-width 4)
+(setq c-basic-offset 4)
+(setq-default indent-tabs-mode nil)
 
 ;; TRAMP
 (setq tramp-default-method "ssh")
@@ -59,7 +60,7 @@
 (yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
 
 ;; Cosmetics
-(set-face-font 'default "-apple-profont-medium-r-normal--9-90-72-72-m-90-iso10646-1")
+(set-face-font 'default "-apple-ProFont-medium-normal-normal-*-9-*-*-*-p-0-iso10646-")
 (color-theme-initialize)
 (color-theme-ir-black)
 

@@ -1,6 +1,31 @@
 ;;; lisp.el
 ;;
 
+(add-to-list 'load-path (concat dotfiles-dir "slime"))
+(add-to-list 'load-path (concat dotfiles-dir "slime/contrib"))
+
+(eval-after-load "slime"
+  '(progn
+     (setq slime-lisp-implementations '((sbcl ("/opt/local/bin/sbcl"))))
+     (slime-setup '(slime-asdf
+                    slime-autodoc
+                    slime-editing-commands
+                    slime-fancy-inspector
+                    slime-fontifying-fu
+                    slime-fuzzy
+                    slime-indentation
+                    slime-mdot-fu
+                    slime-package-fu
+                    slime-references
+                    slime-repl
+                    slime-sbcl-exts
+                    slime-scratch
+                    slime-xref-browser))
+     (slime-autodoc-mode)
+     (setq slime-complete-symbol*-fancy t
+           slime-complete-sumbol-function 'slime-fuzzy-complete-symbol)))
+
+
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'coding-hook)
 (add-hook 'lisp-mode-hook 'coding-hook)
