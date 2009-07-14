@@ -1,0 +1,1 @@
+(setenv "PATH" (concat "~/.bin:~/.cabal/bin:/usr/local/bin:/opt/local/bin:" (getenv "PATH")))

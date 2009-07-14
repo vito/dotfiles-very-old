@@ -4,6 +4,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "slime"))
 (add-to-list 'load-path (concat dotfiles-dir "slime/contrib"))
 
+(require 'slime)
+
 (eval-after-load "slime"
   '(progn
      (setq slime-lisp-implementations '((sbcl ("/opt/local/bin/sbcl"))))

@@ -14,7 +14,6 @@
 (require 'ansi-color)
 (require 'recentf)
 (require 'redo)
-(require 'slime)
 (require 'yasnippet)
 (require 'unbound)
 (require 'whitespace)

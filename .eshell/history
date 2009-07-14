@@ -1,0 +1,128 @@
+cp -R ../.bash_profile ../.bashrc ../.irssi ../.vim ../.vimrc .
+ls -al
+gst
+git status
+git add ./.irssi/scripts/autorun
+git add ./.vim/plugin/gitignore.vim
+git add ./.vim/syntax/ragel.vim
+git status
+cp -R ../.emacs.d .
+ls
+ls -al
+cd .emacs.d
+ls
+rm -R backups/*
+rm -Rf elpa
+ls auto-save-list
+rmdir auto-save-list
+rm -R auto-save-list
+ls
+rm places
+rm -R backups
+git status
+ls
+rm loaddefs.el
+cd ..
+git status
+git add .emacs.d
+grep -r recompile-init ../.emacs.d/
+cp -r ../.emacs.d .
+git status
+git commit -a -m "Emacs configuration cleanups."
+git push
+cd ../.emacs.d
+ls
+cd vendor/
+ls
+curl -O http://www.wonderworks.com/download/redo.el
+cd ..
+cd ..
+cd dotfiles/
+cp -r ../.emacs.d .
+git status
+git add .emacs.d/vendor/redo.el 
+git status
+rm -Rf .git
+git init
+vim .irssi/config
+emacsclient .irssi/config
+git status
+git add .Xdefaults .bash_profile .bashrc .fonts.conf .conts .gntrc .gtkrc-2.0 .irssi .ncmpcpp .vim .vimrc .xbindkeysrc .xinitrc .xmobarrc .xmonad
+git add .Xdefaults .bash_profile .bashrc .fonts.conf .fonts .gntrc .gtkrc-2.0 .irssi .ncmpcpp .vim .vimrc .xbindkeysrc .xinitrc .xmobarrc .xmonad
+git status
+cd .emacs.d
+ls
+rm -Rf auto-save-list backups elpa places
+git status
+ls
+cd ..
+git add .emacs.d
+grep -r why4 *
+git status
+git commit -a -m "Initial dotfiles import."
+git push
+git push origin master
+git remote add origin git@github.com:vito/dotfiles.git
+git push origin master
+ls
+cp ../.emacs.d/vendor/eshell-vc.el ./.emacs.d/vendor/
+cd ../dotfiles/
+ssh toogeneric.com -l root
+grep -r "fullscreen" *
+(setq visible-bell nil)
+defaults read com.apple.Terminal Bell
+defaults read com.apple.Terminal
+defaults write com.apple.Terminal Bell -string NO
+defaults delete com.apple.Terminal Bell
+(setq ring-bell-function 'ignore)
+ls slime
+cd ~/emacs/
+find . -name emacs
+./src/emacs --version
+sudo make install | grep src/emacs
+cd ~/emacs/
+sudo make install
+sudo make install | grep src/emacs
+cd src
+ls
+ls -al | grep emacs
+./bootstrap-emacs --help
+sudo cp emacs /usr/bin/
+emacs --version
+/usr/bin/emacs --version
+cd
+ls
+cd dotfiles/
+ls
+git status
+git
+git-status
+/opt/local/bin/git status
+ls -al
+cp -r ../.emacs.d .
+/opt/local/bin/git status
+/opt/local/bin/git add .emacs.d/vendor/php-mode.el 
+/opt/local/bin/git commit -a -m "Emacs configuration updates for Emacs 23 Cocoa (and other misc. stuff)."
+/opt/local/bin/git push origin master
+cat ~/.bashrc 
+alias gst="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gca="git commit -a"
+alias gcd="git commit -v"
+alias gcad="git commit -a -v"
+alias gps="git push"
+alias gpl="git pull"
+alias gb="git branch"
+alias gco="git checkout"
+alias gd="git diff"
+gcad
+gps
+eshell-alias-completions
+mkdir ~/.eshell
+emacsclient ~/.eshell
+cd ~/.eshell
+ls
+cp ~/.bashrc login
+emacsclient login
+ls

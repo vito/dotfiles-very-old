@@ -1,0 +1,12 @@
+alias gd git diff
+alias gco git checkout
+alias gb git branch
+alias gpl git pull
+alias gps git push
+alias gcad git commit -a -v
+alias gcd git commit -v
+alias gca git commit -a
+alias gc git commit
+alias ga git add
+alias gst git status
+alias emacs find-file $1
