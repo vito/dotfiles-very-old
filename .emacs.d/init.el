@@ -1,6 +1,7 @@
 ;;; Emacs configuration file
 
 (setq dotfiles-dir "~/.emacs.d/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp")
 (add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path (concat dotfiles-dir "vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "vendor/color-theme"))
@@ -17,8 +18,7 @@
 (require 'yasnippet)
 (require 'unbound)
 (require 'whitespace)
-(require 'php-mode)
-(require 'textile-mode)
+(require 'magit)
 (require 'color-theme)
 
 ;; My configs
@@ -27,11 +27,19 @@
 (require 'misc)
 (require 'eshell-conf)
 (require 'lisp)
+(require 'haskell)
+(require 'php)
 
 ;; Editing
 (setq tab-width 4)
 (setq c-basic-offset 4)
 (setq-default indent-tabs-mode nil)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Anthy, for Japanese input
+(set-language-environment "Japanese")
+(load-library "anthy")
+(setq default-input-method "japanese-anthy")
 
 ;; TRAMP
 (setq tramp-default-method "ssh")
@@ -59,7 +67,7 @@
 (yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
 
 ;; Cosmetics
-(set-face-font 'default "-apple-ProFont-medium-normal-normal-*-9-*-*-*-p-0-iso10646-")
+(set-face-font 'default "ProFont:pixelsize=11:foundry=unknown:weight=normal:slant=normal:width=normal:spacing=100")
 (color-theme-initialize)
 (color-theme-ir-black)
 

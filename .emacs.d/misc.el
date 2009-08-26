@@ -1,5 +1,4 @@
 ;;; misc.el
-;;
 
 (when window-system
   (mouse-wheel-mode t)
@@ -24,7 +23,9 @@
       whitespace-line-column 100
       ediff-window-setup-function 'ediff-setup-windows-plain
       oddmuse-directory (concat dotfiles-dir "oddmuse")
-      save-place-file (concat dotfiles-dir "places"))
+      save-place-file (concat dotfiles-dir "places")
+      x-select-enable-clipboard t
+      interprogram-pase-function 'x-cut-buffer-or-selection-value)
 
 ;; Minor configurations
 (prefer-coding-system 'utf-8)
@@ -33,6 +34,7 @@
 (global-font-lock-mode t)
 (recentf-mode 1)
 (show-paren-mode 1)
+(menu-bar-mode 0)
 
 ;; Use ido
 (when (> emacs-major-version 21)

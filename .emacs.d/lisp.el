@@ -1,5 +1,4 @@
 ;;; lisp.el
-;;
 
 (add-to-list 'load-path (concat dotfiles-dir "slime"))
 (add-to-list 'load-path (concat dotfiles-dir "slime/contrib"))
@@ -8,7 +7,7 @@
 
 (eval-after-load "slime"
   '(progn
-     (setq slime-lisp-implementations '((sbcl ("/opt/local/bin/sbcl"))))
+     (setq slime-lisp-implementations '((sbcl ("sbcl"))))
      (slime-setup '(slime-asdf
                     slime-autodoc
                     slime-editing-commands

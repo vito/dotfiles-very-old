@@ -1,5 +1,4 @@
 ;;; defuns.el
-;;
 
 (require 'imenu)
 
