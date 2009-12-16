@@ -2,8 +2,8 @@
 
 (require 'imenu)
 
-;; Buffer-related
 
+;; Buffer-related
 (defun coding-hook ()
   "Enable things that are convenient across all coding buffers."
   (set (make-local-variable 'comment-auto-fill-only-comments) t)
@@ -35,8 +35,8 @@
     (when file
       (find-file file))))
 
-;; Other
 
+;; Other
 (defun toggle-fullscreen ()
   (interactive)
   (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)

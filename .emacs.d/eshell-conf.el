@@ -1,4 +1,4 @@
-;;; eshell.el
+;;; eshell-conf.el
 
 (setq eshell-cmpl-cycle-completions nil
       eshell-save-history-on-exit t

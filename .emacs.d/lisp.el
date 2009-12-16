@@ -4,6 +4,9 @@
 (add-to-list 'load-path (concat dotfiles-dir "slime/contrib"))
 
 (require 'slime)
+(require 'geiser)
+
+;; (setq geiser-scheme-dir "/usr/local/share/geiser")
 
 (eval-after-load "slime"
   '(progn
@@ -25,7 +28,6 @@
      (slime-autodoc-mode)
      (setq slime-complete-symbol*-fancy t
            slime-complete-sumbol-function 'slime-fuzzy-complete-symbol)))
-
 
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'coding-hook)
@@ -49,9 +51,15 @@
                         '(("(\\|)" . 'paren-face)))
 
 (font-lock-add-keywords 'scheme-mode
-                        '(("(\\|)" . 'paren-font)))
+                        '(("(\\|)" . 'paren-face)))
 
 (font-lock-add-keywords 'lisp-mode
+                        '(("(\\|)" . 'paren-face)))
+
+(font-lock-add-keywords 'lfe-mode
+                        '(("(\\|)" . 'paren-face)))
+
+(font-lock-add-keywords 'hen-mode
                         '(("(\\|)" . 'paren-face)))
 
 (define-key lisp-mode-shared-map (kbd "C-c l") "lambda")
@@ -67,5 +75,12 @@
      (:foreground "grey55")))
   "Face used to dim parentheses."
   :group 'faces)
+
+(autoload 'scheme-get-current-symbol-info "scheme-complete" nil t)
+(add-hook 'scheme-mode-hook
+  (lambda ()
+    (make-local-variable 'eldoc-documentation-function)
+    (setq eldoc-documentation-function 'scheme-get-current-symbol-info)
+    (eldoc-mode)))
 
 (provide 'lisp)

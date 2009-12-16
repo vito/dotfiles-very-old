@@ -1,4 +1,0 @@
-# This was cloned from a TextMate bundle for yasnippet.
-# --
-(defparameter *${1:name}* ${2:value}
-  "${3:Documentation for $1.}")

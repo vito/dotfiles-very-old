@@ -1,4 +1,0 @@
-# This was cloned from a TextMate bundle for yasnippet.
-# --
-(if (${1:test})
-  ($0))
